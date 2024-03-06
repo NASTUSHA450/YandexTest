@@ -126,7 +126,7 @@ table {
 #mainContainer #preview {
   position: relative;
   display: flex;
-  z-index: 2;
+  z-index: 1;
 }
 #mainContainer #preview::before {
   content: "";

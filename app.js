@@ -65,7 +65,7 @@ function returnCards(valuesCards) {
     .map(
       (valuesCard) => `
   <div class="my-card">
-      <img src="/img/avatar.jpg" alt="" />
+      <img src="/YandexTest/img/avatar.jpg" alt="" />
       <p class="center">${valuesCard.name}</p>
       <p class="desc">${valuesCard.desc}</p>
       <div class="center"><button>Подробнее</button></div>
