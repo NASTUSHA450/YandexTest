@@ -117,7 +117,7 @@ table {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-image: url("img/preview-noise.png");
+  background-image: url("/YandexTest/img/preview-noise.png");
   top: 0;
   left: 0;
   z-index: 1;
@@ -133,7 +133,7 @@ table {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-image: url("/img/preview-background.png");
+  background-image: url("/YandexTest/img/preview-background.png");
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -146,7 +146,7 @@ table {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-image: url("/img/preview-front.png");
+  background-image: url("/YandexTest/img/preview-front.png");
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -307,7 +307,7 @@ table {
 #steps .content-container td,
 #steps .carousel .my-card {
   padding: 1.5rem;
-  background-image: url("img/table-box-bg.jpg");
+  background-image: url("/YandexTest/img/table-box-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -556,7 +556,7 @@ table {
     background-image: none !important;
   }
   #mainContainer #preview::before {
-    background-image: url("img/preview-bg-mobile.png");
+    background-image: url("/YandexTest/img/preview-bg-mobile.png");
     background-size: contain;
   }
   #mainContainer #preview .preview-content {
