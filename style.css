@@ -1,0 +1,599 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Golos Text", sans-serif;
+  color: #313131;
+  font-weight: 400;
+  user-select: none
+}
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #3057a2;
+  text-transform: initial;
+}
+.center {
+  text-align: center;
+}
+.mobile {
+  display: none;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.text-red {
+  color: red;
+}
+.text-white {
+  color: white;
+}
+.font-xxl {
+  font-size: 3.375rem;
+}
+.font-xl {
+  font-size: 2.25rem;
+}
+.font-md {
+  font-size: 1.125rem;
+}
+.headline p,
+.headline,
+.line p {
+  font-family: "Merriweather", serif !important;
+  font-weight: 400;
+}
+.headline.font-xxl {
+  margin-bottom: 4rem;
+}
+
+.flex-between {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+table {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+.content-container {
+  padding: 2% 26%;
+  position: relative;
+  display: block;
+}
+#mainContainer #preview {
+  width: 60%;
+}
+@media screen and (max-width: 2400px) {
+  .content-container {
+    padding: 2% 20%;
+  }
+}
+@media screen and (max-width: 2050px) {
+  #mainContainer #preview,
+  #steps .content-container {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 1900px) {
+  .content-container {
+    padding: 2% 15%;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .content-container {
+    padding: 2% 10%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .content-container {
+    padding: 2% 6%;
+  }
+}
+
+#supportChess,
+#steps,
+#members,
+#footer {
+  margin-top: 4rem;
+}
+#mainContainer {
+  height: 92vh;
+  background-color: #e9ded4;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3.75rem;
+}
+#mainContainer::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("img/preview-noise.png");
+  top: 0;
+  left: 0;
+  z-index: 1;
+  mix-blend-mode: color-burn;
+}
+#mainContainer #preview {
+  position: relative;
+  display: flex;
+  z-index: 2;
+}
+#mainContainer #preview::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("/img/preview-background.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+#mainContainer #preview::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("/img/preview-front.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+#mainContainer #preview .preview-content {
+  position: relative;
+  z-index: 3;
+}
+#mainContainer #preview .preview-content .logo img {
+  height: 2.25rem;
+  margin-bottom: 5rem;
+}
+#mainContainer #preview .preview-content .headline {
+  font-size: 60px;
+}
+#mainContainer #preview .preview-content .text {
+  padding: 2rem 0;
+}
+#mainContainer #preview .preview-content .buttonset {
+  display: flex;
+}
+#mainContainer #preview .preview-content .buttonset button {
+  width: 100%;
+  border-radius: 4.125rem;
+  padding: 1.25rem;
+  border: 1px solid #1f1f1f;
+  font-weight: 500 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: static;
+  z-index: 10;
+}
+#mainContainer #preview .preview-content .buttonset button:first-child {
+  margin-right: 1rem;
+  background-color: #1f1f1f;
+}
+#mainContainer #preview .preview-content .buttonset button:first-child:hover {
+  background-color: #fbce51;
+  border: 1px solid #fbce51;
+}
+#mainContainer #preview .preview-content .buttonset button:first-child:hover p {
+  color: #1f1f1f;
+}
+#mainContainer #preview .preview-content .buttonset button:last-child {
+  background-color: transparent;
+}
+#mainContainer #preview .preview-content .buttonset button:last-child:hover {
+  background-color: #1f1f1f;
+}
+#mainContainer #preview .preview-content .buttonset button:last-child:hover p {
+  color: white;
+}
+#mainContainer #preview .preview-content .buttonset button p {
+  width: 55%;
+}
+.line {
+  position: absolute;
+  background-color: red;
+  color: white;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  height: 3.75rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.375rem;
+}
+.line .runningLine {
+  white-space: nowrap;
+}
+#footer .line {
+  bottom: auto;
+  top: 0;
+}
+
+#supportChess {
+  display: flex;
+  justify-content: space-evenly;
+}
+#supportChess .content-container .content-block:first-of-type {
+  margin-bottom: 4rem;
+}
+#supportChess .content-container .content-block {
+  display: flex;
+  justify-content: space-evenly;
+}
+#supportChess .content-container .content-block .text {
+  padding-right: 7rem;
+}
+#supportChess .content-container .content-block .flex-between {
+  margin-left: 2rem;
+}
+#supportChess .content-container .content-block #chessTable {
+  width: 100%;
+  padding: 3rem 0;
+}
+#supportChess .chess-row {
+  display: flex;
+  border-bottom: 2px solid #d0d0d0;
+}
+#supportChess .chess-row:last-of-type {
+  border-bottom: none;
+}
+#supportChess .chess-row p,
+#supportChess .chess-row .chess-col {
+  width: 50%;
+  font-size: 1.25rem;
+  padding: 0.75rem;
+}
+#supportChess .chess-row .chess-col {
+  font-weight: 600;
+  border-left: 2px solid #d0d0d0;
+}
+#supportChess .chess-row s {
+  color: red;
+}
+#supportChess .chess-row s span {
+  font-weight: 600;
+}
+#steps {
+  display: flex;
+  justify-content: space-evenly;
+}
+#steps .headline {
+  margin-bottom: 3rem;
+}
+#steps a {
+  margin-left: 1rem;
+}
+.content-container .content-box {
+  position: relative;
+}
+#steps .content-container .plane {
+  position: absolute;
+  bottom: 0;
+  right: -6rem;
+}
+#steps .content-container table {
+  border-spacing: 0;
+}
+#steps .content-container table tbody {
+  margin: -25px;
+  display: block;
+  border-spacing: 25px;
+}
+#steps .content-container td {
+  vertical-align: top;
+}
+#steps .content-container tr:last-child td:last-child {
+  padding-right: 25%;
+}
+#steps .content-container td,
+#steps .carousel .my-card {
+  padding: 1.5rem;
+  background-image: url("img/table-box-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#steps .content-container .table-box {
+  display: flex;
+}
+#steps .content-container .table-box p {
+  font-weight: 500;
+}
+#steps .content-container .table-box .number {
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 60px;
+  width: 36px;
+  height: 36px;
+  font-size: 1.25rem;
+  margin-right: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #313131;
+  font-weight: 600;
+}
+#steps .content-container .table-box p {
+  font-size: 1.25rem;
+  color: #313131;
+}
+#steps .carousel {
+  padding: 10rem 0 0 6%;
+}
+#steps .carousel .navigation {
+  position: relative;
+}
+#members .my-card {
+  width: 33%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+#members .my-card img {
+  margin-bottom: 1.5rem;
+}
+#members .my-card p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+#members .my-card .desc {
+  color: #313131;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+#members .my-card button {
+  background-color: white;
+  border: 1px solid #3057a2;
+  color: #3057a2;
+  border-radius: 62px;
+  padding: 0.5rem 0.75rem;
+  font-size: 16px;
+  cursor: pointer;
+}
+#members .my-card button:hover {
+  color: white;
+  background-color: #3057a2;
+}
+#steps .carousel .my-card {
+  width: 20.25rem;
+  height: 18.75rem;
+  color: white;
+  display: flex;
+  flex-flow: column;
+}
+#steps .carousel .my-card .table-box {
+  margin: 1.5rem 0;
+}
+#steps .carousel .carousel-main,
+#members .avatar-carousel .carousel-main {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+#steps .carousel .carousel-main .carousel-content,
+#members .avatar-carousel .carousel-main .carousel-content {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#steps .carousel .carousel-main .carousel-content > *,
+#members .avatar-carousel .carousel-main .carousel-content > * {
+  flex: 0 0 auto;
+  margin-right: 1.5rem;
+}
+
+#steps .carousel .carousel-main .carousel-content > :last-child {
+  margin-right: 0;
+}
+#steps .carousel .navigation {
+  display: flex;
+  justify-content: center;
+}
+#members .avatar-carousel .navigation {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.navigation .carousel-arrow {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #313131;
+  border-radius: 100px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.navigation .carousel-arrow:hover {
+  background-color: #fbce51;
+}
+.carousel-arrow-disabled {
+  background-color: #d6d6d6 !important;
+}
+#members .avatar-carousel .navigation .carousel-arrow {
+  margin: 0 1rem;
+}
+#members .avatar-carousel .navigation .carousel-navigation span {
+  font-size: 1.25rem;
+}
+
+#steps .carousel .navigation .carousel-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+
+#steps .carousel .navigation .carousel-navigation .carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+  margin: 0 0.2rem;
+  background-color: #d9d9d9;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+#steps .carousel .navigation .carousel-navigation .carousel-dot-active {
+  background-color: #313131;
+  cursor: auto;
+}
+
+#footer {
+  background-color: #e9ded4;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  color: #313131;
+  font-size: 16px;
+  padding: 4rem 0 2rem 0;
+  font-weight: 400;
+}
+@media screen and (max-width: 1200px) {
+  .desk {
+    display: none !important;
+  }
+  .mobile {
+    display: block !important;
+  }
+  .font-xxl {
+    font-size: 2.25rem;
+  }
+  .font-xl {
+    font-size: 1.75rem;
+  }
+  #mainContainer #preview .preview-content {
+    width: 45%;
+  }
+  #mainContainer #preview .preview-content .headline {
+    font-size: 36px !important;
+  }
+  #mainContainer #preview .preview-content .buttonset {
+    flex-flow: column;
+  }
+  #mainContainer #preview .preview-content .buttonset button:first-child {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  #mainContainer #preview .preview-content .buttonset button:last-child {
+    background-color: white;
+    border: 1px solid white;
+  }
+  #mainContainer #preview .preview-content .buttonset button p {
+    width: 100%;
+  }
+  #supportChess {
+    font-size: 1.75rem;
+  }
+  #supportChess .content-container .content-block {
+    flex-flow: column;
+  }
+  #supportChess .content-container .content-block .text {
+    padding-right: 3rem;
+  }
+  #supportChess .content-container .content-block .picture {
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+  }
+  #supportChess .content-container .content-block:last-of-type .picture {
+    margin-top: 0;
+  }
+  #supportChess .content-container .content-block .flex-between {
+    margin-left: 0;
+  }
+  #steps .headline {
+    margin-bottom: 0 !important;
+  }
+  #steps a {
+    margin-left: 0;
+  }
+  #steps .content-container .headline {
+    padding: 0 6%;
+    display: flex;
+    flex-flow: column;
+  }
+  #steps .content-container .plane {
+    top: 16%;
+    left: 0;
+  }
+  #members .my-card {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mainContainer {
+    height: 91vh;
+  }
+  #mainContainer #preview::after {
+    background-image: none !important;
+  }
+  #mainContainer #preview::before {
+    background-image: url("img/preview-bg-mobile.png");
+    background-size: contain;
+  }
+  #mainContainer #preview .preview-content {
+    width: 100%;
+  }
+  #members .my-card {
+    width: 100%;
+  }
+  #members .avatar-carousel .navigation {
+    display: flex;
+    align-items: center;
+    position: static;
+    justify-content: center;
+  }
+  #supportChess .chess-row {
+    display: flex;
+    flex-flow: column;
+  }
+  #supportChess .chess-row .chess-col {
+    font-weight: 600;
+    border-left: 0;
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content-container,
+  #preview.content-container .preview-content {
+    width: 90%;
+  }
+  #supportChess .content-container .content-block table {
+    width: 90%;
+  }
+  #supportChess .content-container .content-block .picture img {
+    width: 100%;
+  }
+  #steps .content-container .plane {
+    top: 20%;
+    left: 0;
+  }
+}
